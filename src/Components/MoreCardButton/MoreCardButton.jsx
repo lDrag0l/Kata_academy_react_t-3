@@ -9,15 +9,7 @@ function MoreCardButton() {
 
     const selectedTransfers = useSelector(state => state.checkbox.selectedTransfers)
 
-    const handleClick = () => {
-        dispatch(addMoreTickets())
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    }
-
-    const content = selectedTransfers.length > 0 ? <button onClick={handleClick} className={s.moreCardButton}>Показать ещё 5 билетов</button> : null
+    const content = selectedTransfers.length > 0 ? <button onClick={() => { dispatch(addMoreTickets()) }} className={s.moreCardButton}>Показать ещё 5 билетов</button> : null
 
     return (
         <>
