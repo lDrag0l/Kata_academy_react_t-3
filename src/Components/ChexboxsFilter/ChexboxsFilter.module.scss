@@ -1,0 +1,67 @@
+.optionsWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px 0 #0000001A;
+    color: #4A4A4A;
+    font-size: 12px;
+    padding-bottom: 10px;
+
+    .optionHeader {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        padding: 20px;
+        padding-bottom: 8px;
+    }
+
+    .optionLabel {
+        display: flex;
+        font-size: 13px;
+        align-items: center;
+        cursor: pointer;
+        height: 35px;
+        padding: 0 20px;
+
+        &:hover {
+            background-color: #F1FCFF;
+        }
+    }
+
+    .optionInput {
+        position: relative;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 17px;
+        height: 17px;
+        border: 1px solid rgb(154, 187, 206);
+        border-radius: 2px;
+        cursor: pointer;
+
+        &:checked {
+            border: 1px solid rgb(33, 150, 243);
+        }
+
+        &:checked::after {
+            content: "✔";
+            position: absolute;
+            color: #2196f3;
+            left: 2px;
+            top: -2px;
+        }
+
+        &:focus {
+            border: 2px solid rgb(33, 150, 243);
+            outline: none
+        }
+    }
+
+    .optionText {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,67 @@
+.Card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "header"
+        "from"
+        "To";
+    padding: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px #0000001a;
+    background: #fff;
+    margin-bottom: 20px;
+    width: 500px;
+    gap: 20px 0;
+
+    .cardHeader {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "price none logo";
+        justify-items: center;
+
+        .cardPrice {
+            color: #2196f3;
+            font-size: 24px;
+            font-weight: 600;
+            grid-area: price;
+        }
+
+        .cardCompLogo {
+            grid-area: logo;
+        }
+    }
+
+    .cardDetailsFrom {
+        grid-area: from;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .cardDetailsTo {
+        grid-area: To;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .routeTop,
+    .durationTop,
+    .transfersTop {
+        color: #a0b0b9;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    .routeBottom,
+    .durationBottom,
+    .transfersBottom {
+        color: #4a4a4a;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
