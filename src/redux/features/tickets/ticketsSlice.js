@@ -17,6 +17,9 @@ const ticketsSlice = createSlice({
     reducers: {
         addMoreTickets: (state) => {
             state.countOfTickets += 5
+        },
+        resetCountOfTicket: (state) => {
+            state.countOfTickets = initialState.countOfTickets
         }
     },
     extraReducers: (builder) => {
@@ -50,6 +53,6 @@ const ticketsSlice = createSlice({
     }
 })
 
-export const { addMoreTickets } = ticketsSlice.actions
+export const { addMoreTickets, resetCountOfTicket } = ticketsSlice.actions
 
 export default ticketsSlice.reducer

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setFilter } from '../../redux/features/filters/filtersSlice';
 
 import s from './TabFilter.module.scss'
+import { resetCountOfTicket } from "../../redux/features/tickets/ticketsSlice";
 
 function TabFilter() {
     const selectedFilter = useSelector(state => state.filters.selectedFilter)
@@ -12,13 +13,18 @@ function TabFilter() {
 
     const options = ['Самый дешевый', 'Самый быстрый', 'Оптимальный'];
 
+    const handleClick = (tab) => {
+        dispatch(setFilter(tab))
+        dispatch(resetCountOfTicket())
+    }
+
     return (
         <div className={s.tabContainer}>
             {filters.map(tab => (
                 <button
                     key={tab}
                     className={`${s.tab} ${selectedFilter === tab ? s.activeTab : ''}`}
-                    onClick={() => dispatch(setFilter(tab))}
+                    onClick={() => handleClick(tab)}
                 >
                     {options[tab]}
                 </button>
