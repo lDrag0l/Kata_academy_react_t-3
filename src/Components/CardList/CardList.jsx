@@ -6,7 +6,7 @@ import { selectAndSortTickets } from './../../redux/features/tickets/ticketsSele
 
 import { v4 as uuidv4 } from 'uuid';
 
-import Card from './../Card'
+import Card from './../Card/Card'
 import s from './CardList.module.scss'
 
 function CardList() {
