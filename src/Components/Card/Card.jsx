@@ -1,7 +1,8 @@
-import s from './Card.module.scss'
+import PropTypes from 'prop-types';
+
 import { formateDate, formatDuration } from './../../Utils'
 
-import PropTypes from 'prop-types';
+import s from './Card.module.scss'
 
 function Card({ ticket = {} }) {
     const { price, carrier, segments } = ticket

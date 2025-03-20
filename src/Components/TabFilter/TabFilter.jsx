@@ -1,10 +1,13 @@
-import s from './TabFilter.module.scss'
 import { useDispatch, useSelector } from "react-redux";
+
 import { setFilter } from '../../redux/features/filters/filtersSlice';
+
+import s from './TabFilter.module.scss'
 
 function TabFilter() {
     const selectedFilter = useSelector(state => state.filters.selectedFilter)
     const filters = useSelector(state => state.filters.filters)
+
     const dispatch = useDispatch()
 
     const options = ['Самый дешевый', 'Самый быстрый', 'Оптимальный'];

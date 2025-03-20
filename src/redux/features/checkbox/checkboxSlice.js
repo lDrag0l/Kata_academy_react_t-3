@@ -11,7 +11,6 @@ const initialState = {
 const checkboxSlice = createSlice({
     name: 'checkbox',
     initialState,
-
     reducers: {
         toggleCheckbox: (state, action) => {
             const index = state.selectedTransfers.indexOf(action.payload)
@@ -24,7 +23,6 @@ const checkboxSlice = createSlice({
 
             state.isAllSelected = state.selectedTransfers.length === state.transferOptions.length
         },
-
         toggleAll: (state) => {
             if (state.isAllSelected) {
                 state.selectedTransfers = []

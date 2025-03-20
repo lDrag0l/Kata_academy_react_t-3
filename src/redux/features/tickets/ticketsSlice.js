@@ -19,7 +19,6 @@ const ticketsSlice = createSlice({
             state.countOfTickets += 5
         }
     },
-
     extraReducers: (builder) => {
         builder
             //searchID

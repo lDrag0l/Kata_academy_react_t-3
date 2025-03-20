@@ -1,12 +1,14 @@
-import s from './ChexboxsFilter.module.scss'
 import { useDispatch, useSelector } from "react-redux";
 
 import { toggleCheckbox, toggleAll } from '../../redux/features/checkbox/checkboxSlice';
+
+import s from './ChexboxsFilter.module.scss'
 
 function ChexboxsFilter() {
     const all = useSelector(state => state.checkbox.isAllSelected)
     const checkboxs = useSelector(state => state.checkbox.transferOptions)
     const selectedTransfers = useSelector(state => state.checkbox.selectedTransfers)
+
     const dispatch = useDispatch()
 
     const options = {

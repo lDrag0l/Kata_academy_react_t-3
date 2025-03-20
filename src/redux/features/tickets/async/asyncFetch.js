@@ -6,7 +6,6 @@ export const fetchSearchId = createAsyncThunk(
         try {
             const response = await fetch('https://aviasales-test-api.kata.academy/search')
 
-
             if (!response.ok) {
                 throw new Error('Failed to fetch Search ID')
             }

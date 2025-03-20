@@ -12,7 +12,9 @@ export const selectAndSortTickets = createSelector(
 
         const filteredTickets = tickets.filter((item) => {
             const [there, back] = item.segments
+
             const transfersCount = there.stops.length >= back.stops.length ? there.stops.length : back.stops.length
+
             return selectedTransfers.indexOf(transfersCount) !== -1
         })
 
@@ -21,9 +23,9 @@ export const selectAndSortTickets = createSelector(
                 return [...filteredTickets].sort((a, b) => a.price - b.price)
             case 1:
                 return [...filteredTickets].sort((a, b) => {
-
                     const durationA = a.segments.reduce((sum, segment) => sum + segment.duration, 0)
                     const durationB = b.segments.reduce((sum, segment) => sum + segment.duration, 0)
+
                     return durationA - durationB
                 })
             case 2:

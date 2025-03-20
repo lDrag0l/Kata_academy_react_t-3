@@ -1,9 +1,10 @@
 import ChexboxsFilter from '../ChexboxsFilter'
 import Header from '../Header'
 import TabFilter from '../TabFilter'
-import s from './App.module.scss'
 import CardList from '../CardList'
 import MoreCardButton from '../MoreCardButton/MoreCardButton'
+
+import s from './App.module.scss'
 
 function App() {
     return (
