@@ -54,10 +54,10 @@ function CardList() {
         content = <div style={{ textAlign: 'center' }}>Рейсов, подходящих под заданные фильтры, не найдено</div>
 
     return (
-        <div className={s.contentWrapper}>
+        <main className={s.contentWrapper}>
             {loader}
             {content}
-        </div>
+        </main>
     )
 }
 

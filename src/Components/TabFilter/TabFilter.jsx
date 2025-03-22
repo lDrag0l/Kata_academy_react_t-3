@@ -19,7 +19,7 @@ function TabFilter() {
     }
 
     return (
-        <div className={s.tabContainer}>
+        <nav className={s.tabContainer}>
             {filters.map(tab => (
                 <button
                     key={tab}
@@ -29,7 +29,7 @@ function TabFilter() {
                     {options[tab]}
                 </button>
             ))}
-        </div>
+        </nav>
     );
 }
 

@@ -19,7 +19,7 @@ function ChexboxsFilter() {
     }
 
     return (
-        <div className={s.optionsWrapper}>
+        <aside className={s.optionsWrapper}>
             <h3 className={s.optionHeader}>Количество пересадок</h3>
             <label className={s.optionLabel}>
                 <input
@@ -47,7 +47,7 @@ function ChexboxsFilter() {
                 </label>
             ))
             }
-        </div >
+        </aside>
     )
 }
 
