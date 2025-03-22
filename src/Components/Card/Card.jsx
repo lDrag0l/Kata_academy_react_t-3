@@ -12,19 +12,25 @@ function Card({ ticket = {} }) {
 
     const flyTimeBack = formateDate(back.date, back.duration)
 
+    const options = {
+        1: 'пересадка',
+        2: 'пересадки',
+        3: 'пересадки'
+    }
+
     const flights = [
         {
             route: `${there.origin} – ${there.destination}`,
             time: `${flyTimeTo.start} – ${flyTimeTo.arrival}`,
             duration: formatDuration(there.duration),
-            transfers: there.stops.length !== 0 ? `${there.stops.length} пересадки` : 'Без пересадок',
+            transfers: there.stops.length !== 0 ? `${there.stops.length} ${options[there.stops.length]}` : 'Без пересадок',
             transferLocations: there.stops.join(' '),
         },
         {
             route: `${back.origin} – ${back.destination}`,
             time: `${flyTimeBack.start} – ${flyTimeBack.arrival}`,
             duration: formatDuration(back.duration),
-            transfers: back.stops.length !== 0 ? `${back.stops.length} пересадки` : 'Без пересадок',
+            transfers: back.stops.length !== 0 ? `${back.stops.length} ${options[back.stops.length]}` : 'Без пересадок',
             transferLocations: back.stops.join(' '),
         }
     ];
